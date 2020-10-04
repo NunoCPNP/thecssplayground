@@ -1,0 +1,43 @@
+{
+  "name": "thecssplayground",
+  "version": "0.0.1",
+  "description": "The CSS Playground | Domain mono repository",
+  "repository": "https://github.com/NunoCPNP/thecssplayground.git",
+  "author": {
+    "name": "Nuno Pereira",
+    "email": "hello@nunopereira.tech",
+    "url": "https://www.nunopereira.tech"
+  },
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "preinstall": "node scripts/checkYarn.js"
+  },
+  "lint-staged": {
+    "{**/*.js, !/*.js}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "workspaces": [
+    "packages/*",
+    "projects/*"
+  ],
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@garment/cli": "^0.13.13",
+    "eslint": "^7.10.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "husky": "^4.3.0",
+    "lerna": "^3.22.1",
+    "lint-staged": "^10.4.0",
+    "prettier": "^2.1.2",
+    "standard": "^14.3.4",
+    "stylelint": "^13.7.2",
+    "stylelint-config-standard": "^20.0.0"
+  }
+}
